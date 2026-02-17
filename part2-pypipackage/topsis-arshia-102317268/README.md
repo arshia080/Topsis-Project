@@ -1,0 +1,69 @@
+# Topsis-Arshia-102317268
+
+A command-line Python implementation of the **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** algorithm used in **Multi-Criteria Decision Making (MCDM)**.
+
+---
+
+## Features
+
+- Supports **CSV** and **Excel (.xlsx)** input files  
+- Implements full TOPSIS ranking method  
+- Validates user input and handles common errors  
+- Produces decision scores and ranks  
+- Lightweight and easy-to-use CLI tool  
+
+---
+
+## About TOPSIS
+
+TOPSIS is a popular decision-making technique that ranks alternatives based on their distance from the **ideal best** and **ideal worst** solutions.
+
+---
+
+## Installation
+pip install topsis-arshia-102317268
+
+---
+
+## Usage
+
+`topsis <inputfile> <weights> <impacts> <outputfile>`
+
+EXAMPLE: 
+topsis data.xlsx "1,1,1,1" "+,+,+,+" result.csv
+
+---
+
+## Input Rules
+
+1. First column → Alternative names
+2. Remaining columns → Numeric criteria only
+3. Minimum 3 columns required
+4. Number of weights must equal number of criteria
+5. Number of impacts must equal number of criteria
+6. Impacts must be:
+    + → Benefit criterion
+    - → Cost criterion
+
+---
+
+## Output
+
+The output file contains:
+    Original dataset
+    Topsis Score
+    Rank
+**Higher score indicates a better alternative.**
+
+---
+
+## Dependencies
+
+Automatically installed with the package:
+pandas
+numpy
+openpyxl
+
+## Author
+
+**Arshia**
